@@ -1,11 +1,8 @@
 import { Router } from "express";
-import { novedades, canjes, suscripciones, usuarios } from "../controller/get.controllers";
+import { novedades, canjes, suscripciones } from "../controller/get.controllers";
 import { PATH } from "../auxiliar/path";
 
 const router = Router();
-
-router.route(PATH.USUARIOS)
-    .get((req, res) => { usuarios( req, res ) });
 
 router.route(PATH.CANJES)
     .get((req, res) => { canjes( req, res ) });

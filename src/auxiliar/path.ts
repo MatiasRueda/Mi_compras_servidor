@@ -1,6 +1,5 @@
 export enum PATH {
     // GET ROUTES
-    USUARIOS = "/usuarios",
     CANJES = "/canjes",
     NOVEDADES = "/novedades",
     SUSCRIPCIONES = "/suscripciones",

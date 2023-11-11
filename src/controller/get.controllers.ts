@@ -22,16 +22,6 @@ function listaSuscripciones(filas: FilaSuscripcion[]): Suscripcion[] {
     });
     return Array.from(map.values());
 }
-
-export async function usuarios(req: Request ,res: Response): Promise<Response> {
-    try {
-        const usuarios: Usuario[] = await obtener(TABLA.USUARIO);
-        return res.json({ mensaje: EXITO.OBTENER , exito: true ,  dato: usuarios });
-    } catch {
-        return res.json({ mensaje: ERROR.SERVER , exito: false });
-    }
-}
-
 export async function canjes(req: Request ,res: Response): Promise<Response> {
     try {
         const canjes: Canje[] = await obtener(TABLA.CANJE);
