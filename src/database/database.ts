@@ -14,11 +14,12 @@ const saltOrRounds: number = 10;
  */
 async function connect(): Promise<Pool> {
     const connection = await createPool({
-        host: process.env.HOST,
-        user: process.env.USER,
-        password: process.env.PASSWORD,
-        database: process.env.DB,
-        connectionLimit: 3
+        host: process.env.DB_HOST,
+        port: Number(process.env.DB_PORT),
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME,
+        connectionLimit: Number(process.env.DB_CONEXION_LIMIT)
     })
     return connection;
 }

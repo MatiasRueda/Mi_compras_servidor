@@ -1,10 +1,16 @@
 //Enum que representan los mensajes que se enviaran al front
-export enum mensaje {
-    ERROR_NO_DATOS = "Introducir datos porfavor",
-    ERROR_REGISTER = "Usuario ya registrado",
-    ERROR_LOGIN = "Usuario no registrado",
-    ERROR_CONTRASENIA = "La contrasenia es incorrecta",
-    SUCCESS_REGISTER = "Usuario registrado exitosamente",
-    SUCCESS_LOGIN = "Usuario logueado exitosamente",
-    SUCCESS_PUT_DATO = "Datos actualizados",
+
+export enum EXITO {
+    INGRESAR = "Usuario logueado exitosamente",
+    REGISTRAR = "Usuario registrado exitosamente",
+    ACTUALIZAR = "Datos actualizados",
+    OBTENER = "Devolviendo datos"
+}
+
+export enum ERROR {
+    INGRESAR = "Usuario no registrado",
+    REGISTRAR = "Usuario ya registrado",
+    CONTRASENIA = "La contrasenia es incorrecta",
+    NO_DATOS = "Introducir datos porfavor",
+    SERVER = "Ocurrio un error en el servidor"
 }

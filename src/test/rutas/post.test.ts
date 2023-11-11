@@ -2,7 +2,7 @@ import app from "../../express"
 import request from "supertest";
 import { Response } from "supertest";
 import { usuario1Test, usuarioLogin1Test, usuarioRegister1Test } from "../auxiliar/ejemplos";
-import { mensaje } from "../../auxiliar/mensaje";
+import { EXITO , ERROR } from "../../auxiliar/mensaje";
 import { comparar , obtener , agregar } from "../../database/database";
 import { PATH } from "../../auxiliar/path";
 
@@ -26,13 +26,13 @@ describe("- Test Post -", () => {
 
             it("No enviar datos", async () => {
                 const response: Response = await request(app).post(PATH.INGRESAR).send();
-                expect(response.body.mensaje).toStrictEqual(mensaje.ERROR_NO_DATOS);
+                expect(response.body.mensaje).toStrictEqual(ERROR.NO_DATOS);
             })
 
             it("Error en el Login", async () => {
                 (obtener as jest.Mock).mockReturnValue([]);
                 const response: Response = await request(app).post(PATH.INGRESAR).send(usuarioLogin1Test);
-                expect(response.body.mensaje).toStrictEqual(mensaje.ERROR_LOGIN);
+                expect(response.body.mensaje).toStrictEqual(ERROR.INGRESAR);
             })
 
             it("Login exitoso", async () => {
@@ -42,7 +42,7 @@ describe("- Test Post -", () => {
                 (obtener as jest.Mock).mockReturnValue([usuario1Test]);
                 (comparar as jest.Mock).mockReturnValue(true);
                 const response: Response = await request(app).post(PATH.INGRESAR).send(usuarioLogin1Test);
-                expect(response.body.mensaje).toStrictEqual(mensaje.SUCCESS_LOGIN);
+                expect(response.body.mensaje).toStrictEqual(EXITO.INGRESAR);
             })
         })
 
@@ -50,21 +50,21 @@ describe("- Test Post -", () => {
 
             it("No enviar datos", async () => {
                 const response: Response = await request(app).post(PATH.REGISTRAR).send();
-                expect(response.body.mensaje).toStrictEqual(mensaje.ERROR_NO_DATOS);
+                expect(response.body.mensaje).toStrictEqual(ERROR.NO_DATOS);
             })
 
             it("Error en el register", async () => {
                 (obtener as jest.Mock).mockReturnValue([usuario1Test]);
                 await request(app).post(PATH.REGISTRAR).send(usuarioRegister1Test)
                 const response: Response = await request(app).post(PATH.REGISTRAR).send(usuarioRegister1Test);
-                expect(response.body.mensaje).toStrictEqual(mensaje.ERROR_REGISTER);
+                expect(response.body.mensaje).toStrictEqual(ERROR.REGISTRAR);
             })
             
             it("Register exitoso", async () => {
                 (obtener as jest.Mock).mockReturnValue([]);
                 (agregar as jest.Mock).mockReturnValue(true);
                 const response: Response = await request(app).post(PATH.REGISTRAR).send(usuarioRegister1Test);
-                expect(response.body.mensaje).toStrictEqual(mensaje.SUCCESS_REGISTER);
+                expect(response.body.mensaje).toStrictEqual(EXITO.REGISTRAR);
             })
             
         })

@@ -2,7 +2,7 @@ import app from "../../express";
 import request from "supertest";
 import { Response } from "supertest";
 import { usuario1Test } from "../auxiliar/ejemplos";
-import { mensaje } from "../../auxiliar/mensaje";
+import { EXITO , ERROR } from "../../auxiliar/mensaje";
 import { ActualizarDatos } from "../../auxiliar/type";
 import { actualizar } from "../../database/database";
 import { PATH } from "../../auxiliar/path";
@@ -23,14 +23,14 @@ describe("- Test Put -", () => {
 
         it("No enviar datos", async () => {
             const response: Response = await request(app).put(PATH.ACTUALIZAR).send();
-            expect(response.body.mensaje).toStrictEqual(mensaje.ERROR_NO_DATOS);
+            expect(response.body.mensaje).toStrictEqual(ERROR.NO_DATOS);
         })
 
         it("Actualizar los puntos", async () => {
             const datos: ActualizarDatos = { ...usuario1Test, puntos: puntosNuevo};
             (actualizar as jest.Mock).mockReturnValue(true);
             const response: Response = await request(app).put(PATH.ACTUALIZAR).send(datos);
-            expect(response.body.mensaje).toStrictEqual(mensaje.SUCCESS_PUT_DATO);
+            expect(response.body.mensaje).toStrictEqual(EXITO.ACTUALIZAR);
         })
     })
 
@@ -38,7 +38,7 @@ describe("- Test Put -", () => {
 
         it("No enviar datos", async () => {
             const response: Response = await request(app).put(PATH.ACTUALIZAR).send();
-            expect(response.body.mensaje).toStrictEqual(mensaje.ERROR_NO_DATOS);
+            expect(response.body.mensaje).toStrictEqual(ERROR.NO_DATOS);
         })
 
         it("Actualizar los puntos", async () => {

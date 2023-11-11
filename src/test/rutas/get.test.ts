@@ -22,14 +22,14 @@ describe("- Test get -", () => {
             const usuarios: Usuario[] = [usuario1Test, usuario2Test, usuario3Test];
             (obtener as jest.Mock).mockReturnValue(usuarios);
             const response: Response = await request(app).get(PATH.USUARIOS).send();
-            expect(response.body).not.toBeUndefined();
+            expect(response.body.dato).not.toBeUndefined();
         })
 
         it("Se obtiene los usuarios correctos", async() => {
             const usuarios: Usuario[] = [usuario1Test, usuario2Test, usuario3Test];
             (obtener as jest.Mock).mockReturnValue(usuarios);
             const response: Response = await request(app).get(PATH.USUARIOS).send();
-            expect(response.body).toStrictEqual(usuarios);
+            expect(response.body.dato).toStrictEqual(usuarios);
         })
     })
 
@@ -39,7 +39,7 @@ describe("- Test get -", () => {
             const filasSuscripciones: FilaSuscripcion[] = [filaSuscripcion1Test, filaSuscripcion2Test, filaSuscripcion3Test];
             (obtenerTablas as jest.Mock).mockReturnValue(filasSuscripciones);
             const response: Response = await request(app).get(PATH.SUSCRIPCIONES).send();
-            expect(response.body).not.toBeUndefined();
+            expect(response.body.dato).not.toBeUndefined();
         })
 
         it("Se obtiene las suscripciones correctas", async () => {
@@ -47,7 +47,7 @@ describe("- Test get -", () => {
             const suscripciones:  Suscripcion[] = [suscripcion1Test, suscripcion2Test];
             (obtenerTablas as jest.Mock).mockReturnValue(filasSuscripciones);
             const response: Response = await request(app).get(PATH.SUSCRIPCIONES).send();
-            expect(response.body).toStrictEqual(suscripciones);
+            expect(response.body.dato).toStrictEqual(suscripciones);
         })
     })
 })
