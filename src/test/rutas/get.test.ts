@@ -3,9 +3,9 @@ import request from "supertest";
 import { Response } from "supertest";
 import { obtener, obtenerTablas } from "../../database/database";
 import { filaSuscripcion1Test, filaSuscripcion2Test, filaSuscripcion3Test, suscripcion1Test, suscripcion2Test, usuario1Test, usuario2Test, usuario3Test } from "../auxiliar/ejemplos";
-import { Suscripcion, Usuario } from "../../../../auxiliar/type";
-import { PATH } from "../../../../auxiliar/path";
-import { FilaSuscripcion } from "../../auxiliar/type";
+
+import { FilaSuscripcion, Suscripcion, Usuario } from "../../auxiliar/type";
+import { PATH } from "../../auxiliar/path";
 
 jest.mock("../../database/database");
 

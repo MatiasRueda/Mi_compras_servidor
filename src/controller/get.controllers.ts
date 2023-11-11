@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { obtener, obtenerTablas } from "../database/database";
-import { Usuario , Canje, Novedad, Suscripcion } from "../../../auxiliar/type";
-import { FilaSuscripcion } from "../auxiliar/type";
+import { Canje, FilaSuscripcion, Novedad, Suscripcion, Usuario } from "../auxiliar/type";
 import { TABLA } from "../auxiliar/tabla";
 
 function listaSuscripciones(filas: FilaSuscripcion[]): Suscripcion[] {

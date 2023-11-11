@@ -1,4 +1,4 @@
-enum PATH {
+export enum PATH {
     // GET ROUTES
     USUARIOS = "/usuarios",
     CANJES = "/canjes",

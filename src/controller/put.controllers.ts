@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import { mensaje } from "../auxiliar/mensaje";
 import { actualizar, encryptar } from "../database/database";
-import { Usuario } from "../../../auxiliar/type";
 import { TABLA } from "../auxiliar/tabla";
+import { Usuario } from "../auxiliar/type";
 
 export async function actualizarUsuario( req: Request , res: Response ): Promise<Response> {
     if (!Object.keys(req.body).length) 

@@ -1,6 +1,5 @@
 import { Response, Request } from "express";
-import { Usuario } from "../../../auxiliar/type";
-import { Condicion, UsuarioLogin } from "../auxiliar/type";
+import { Condicion, Usuario, UsuarioLogin } from "../auxiliar/type";
 import { agregar, comparar, obtener } from "../database/database";
 import { mensaje } from "../auxiliar/mensaje";
 import { TABLA } from "../auxiliar/tabla";

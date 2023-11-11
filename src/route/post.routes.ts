@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { agregarUsuario , ingresarUsuario } from "../controller/post.controllers";
-import { PATH } from "../../../auxiliar/path";
+import { PATH } from "../auxiliar/path";
 
 const router = Router();
 

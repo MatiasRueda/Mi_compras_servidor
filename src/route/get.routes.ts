@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { PATH } from "../../../auxiliar/path";
 import { novedades, canjes, suscripciones, usuarios } from "../controller/get.controllers";
+import { PATH } from "../auxiliar/path";
 
 const router = Router();
 

@@ -5,7 +5,7 @@ import { usuario1Test } from "../auxiliar/ejemplos";
 import { mensaje } from "../../auxiliar/mensaje";
 import { ActualizarDatos } from "../../auxiliar/type";
 import { actualizar } from "../../database/database";
-import { PATH } from "../../../../auxiliar/path";
+import { PATH } from "../../auxiliar/path";
 
 jest.mock("../../database/database");
 

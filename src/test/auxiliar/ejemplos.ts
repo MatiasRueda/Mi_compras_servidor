@@ -1,5 +1,4 @@
-import {  Suscripcion, Usuario } from "../../../../auxiliar/type"; 
-import { FilaSuscripcion, UsuarioLogin, UsuarioRegister } from "../../auxiliar/type";
+import { FilaSuscripcion, Suscripcion, Usuario, UsuarioLogin, UsuarioRegister } from "../../auxiliar/type";
 
 // Aca va el codigo que sera utilizado en gran parte de los test.
 // y de esta forma evitar tener que reescribir el codigo
