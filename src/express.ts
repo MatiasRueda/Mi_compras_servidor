@@ -13,9 +13,11 @@ app.use(
 );
 
 app.use(express.json());
+
 app.use(getRoutes);
 app.use(postRoutes);
 app.use(putRoutes);
 
+app.set("port", process.env.PORT);
 
 export default app;
