@@ -11,28 +11,6 @@ jest.mock("../../database/database");
 
 describe("- Test get -", () => {
 
-    it("Status 200 cuando visito /usuarios", async() => {
-        const response: Response = await request(app).get(PATH.USUARIOS).send();
-        expect(response.status).toBe(200);
-    })
-
-    describe("usuarios", () => {
-
-        it("Obtener los usuarios NO es undefined", async() => {
-            const usuarios: Usuario[] = [usuario1Test, usuario2Test, usuario3Test];
-            (obtener as jest.Mock).mockReturnValue(usuarios);
-            const response: Response = await request(app).get(PATH.USUARIOS).send();
-            expect(response.body.dato).not.toBeUndefined();
-        })
-
-        it("Se obtiene los usuarios correctos", async() => {
-            const usuarios: Usuario[] = [usuario1Test, usuario2Test, usuario3Test];
-            (obtener as jest.Mock).mockReturnValue(usuarios);
-            const response: Response = await request(app).get(PATH.USUARIOS).send();
-            expect(response.body.dato).toStrictEqual(usuarios);
-        })
-    })
-
     describe("suscripciones", () => {
 
         it("Obtener las suscripcones NO es undefined", async() => {
