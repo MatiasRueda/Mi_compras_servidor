@@ -13,6 +13,47 @@ Proyecto realizado únicamente por mi.
   - MySQL
   - Jest
 
+
+## Estructura
+```
+Mi_compras_servidor
+├─ .gitignore
+├─ package-lock.json
+├─ package.json
+├─ README.md
+├─ src
+│  ├─ auxiliar
+│  │  ├─ mensaje.ts
+│  │  ├─ path.ts
+│  │  ├─ tabla.ts
+│  │  └─ type.ts
+│  ├─ controller
+│  │  ├─ get.controllers.ts
+│  │  ├─ post.controllers.ts
+│  │  └─ put.controllers.ts
+│  ├─ database
+│  │  ├─ database.ts
+│  │  └─ peticion.ts
+│  ├─ express.ts
+│  ├─ index.ts
+│  ├─ route
+│  │  ├─ get.routes.ts
+│  │  ├─ post.routes.ts
+│  │  └─ put.routes.ts
+│  └─ test
+│     ├─ auxiliar
+│     │  └─ ejemplos.ts
+│     ├─ database
+│     │  └─ peticion.test.ts
+│     └─ rutas
+│        ├─ get.test.ts
+│        ├─ post.test.ts
+│        └─ put.test.ts
+├─ tsconfig.json
+└─ tsconfig.spec.json
+
+```
+
 ## Instalación
 Para poder utilizarlo el proyecto es necesario tener una conexión a un server y aplicar el siguiente comando:
 ```
