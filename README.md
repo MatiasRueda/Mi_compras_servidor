@@ -5,8 +5,8 @@
 Proyecto personal para aplicar mis conocimientos en Express, MySQL y Jest. 
 El server ofrece la posibilidad de ingresar y registrarse para poder realizar las compras, le permite al cliente actualizar sus datos ( nombre ,contrasenia , email ). Ademas de otorgar datos como suscripciones, novedades y canjes
 
-## Personas Contribuyentes
-Proyecto realizado únicamente por mi.
+## Tipo de proyecto
+Proyecto individual.
 
 ## Tecnologías utilizadas
   - Express
