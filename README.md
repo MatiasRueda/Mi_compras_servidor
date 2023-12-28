@@ -76,4 +76,4 @@ npm run test
 En caso de querer ver la pagina con server incluido y poder comprar: https://sprightly-bienenstitch-598a97.netlify.app
 
 > [!NOTE]
-> Tanto el server como la base de datos pueden ser lentas. Porfavor tener paciencia.
+> Tanto el server como la base de datos pueden ser lentas. Porfavor tenga paciencia.
