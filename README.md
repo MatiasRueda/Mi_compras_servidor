@@ -197,6 +197,8 @@ En caso de ocurrir algún error se enviara el siguiente Json ( tipo <a href="#re
 ```
 > Es solo un ejemplo el mensaje de error puede variar
 
+</br>
+
 ###  GET
 
 ####  Obtener suscripciones
@@ -271,7 +273,7 @@ En caso de que todo haya salido bien se tendrá una respuesta de este estilo
 
 En este caso **dato** es de tipo **Canje[]**  ( tipo <a href="#canje">Canje</a> )
 
-
+</br>
 
 ###  POST
 #### Ingresar usuario
@@ -345,6 +347,8 @@ En caso de que todo haya salido bien se tendrá una respuesta de este estilo:
 ```
 > Es solo un ejemplo el mensaje puede variar
 
+
+</br>
 
 ### PUT
 #### Actualizar usuario
