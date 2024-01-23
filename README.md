@@ -1,9 +1,11 @@
 # Mi compras server
 ![Static Badge](https://img.shields.io/badge/Estado%20-%20Terminado%20-%20green)
+</br>
 
 ## Introducción
 Proyecto personal para aplicar mis conocimientos en Express, MySQL y Jest. 
 La API ofrece a los usuarios la posibilidad de ingresar y registrarse para poder realizar las compras, actualizar los datos del cliente ( nombre ,contraseña , email ), realizar compras y obtener novedades, suscripciones y canjes
+</br>
 
 ## Tabla de contenido
 * [Introducción](#Introducción)
@@ -15,9 +17,12 @@ La API ofrece a los usuarios la posibilidad de ingresar y registrarse para poder
 * [Uso](#Uso)
 * [Peticiones](#Peticiones)
 
+</br>
 
 ## Tipo de proyecto
 Proyecto individual.
+
+</br>
 
 ## Tecnologías utilizadas
   - Express
@@ -26,6 +31,7 @@ Proyecto individual.
   - NodeJS
   - Jest
 
+</br>
 
 ## Estructura
 ```
@@ -66,6 +72,7 @@ Mi_compras_servidor
 └─ tsconfig.spec.json
 
 ```
+</br>
 
 ## Instalación 
 Es necesario instalar node, para eso es necesario ir a la siguiente pagina y descargarlo:
@@ -77,6 +84,7 @@ npm i
 ```
 Esto instalara las dependencias que el proyecto necesita
 
+</br>
 
 ## Uso
 Hay dos formas de usar la API<br/>
@@ -91,15 +99,17 @@ Para poder correr los test escriba el siguiente comando:
 npm run test
 ```
 
-> [!NOTE]
-> Tanto el server como la base de datos pueden ser lentas. Porfavor tenga paciencia.
-
-
 **En linea**:  
 En caso de querer utilizarla en linea dirigirse a la siguiente dirección:
 ```
 mi-compras.onrender.com
 ```
+
+
+> [!NOTE]
+> Tanto el server como la base de datos pueden ser lentas. Porfavor tenga paciencia.
+
+</br>
 
 
 ## Peticiones
@@ -263,7 +273,7 @@ En este caso **dato** es de tipo **Canje[]**  ( tipo <a href="#canje">Canje</a> 
 
 
 
-###  Post
+###  POST
 #### Ingresar usuario
 **Endpoint**: "ingresar" </br>
 Un usuario puede recuperar sus datos
@@ -382,7 +392,3 @@ En caso de que todo haya salido bien se tendrá una respuesta de este estilo:
 }
 ```
 > Es solo un ejemplo el mensaje puede variar
-En caso de querer ver la pagina con server incluido y poder comprar: https://sprightly-bienenstitch-598a97.netlify.app
-
-> [!NOTE]
-> Tanto el server como la base de datos pueden ser lentas. Porfavor tenga paciencia.
