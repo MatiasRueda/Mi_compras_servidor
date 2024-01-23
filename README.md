@@ -228,6 +228,8 @@ En caso de que todo haya salido bien se tendrá una respuesta de este estilo
 
 En este caso **dato** es de tipo **Suscripción[]**  ( tipo <a href="#suscripción">Suscripción</a> )
 
+</br>
+
 ####  Obtener novedades
 **Endpoint**: "novedades" </br>
 Se obtienen los tipos de novedades existentes </br>
@@ -249,6 +251,8 @@ En caso de que todo haya salido bien se tendrá una respuesta de este estilo
 > Es solo un ejemplo la cantidad de novedades puede variar, así como los títulos y descripciones de esta.
 
 En este caso **dato** es de tipo **Novedad[]**  ( tipo <a href="#novedad">Novedad</a> )
+
+</br>
 
 ####  Obtener canjes
 **Endpoint**: "canjes" </br>
@@ -316,6 +320,8 @@ En caso de que todo haya salido bien se tendrá una respuesta de este estilo:
 > Es solo un ejemplo el mensaje, al igual que los datos del usuario puede variar
 
 En este caso **dato** es de tipo **Usuario**  ( tipo <a href="#usuario">Usuario</a> )
+
+</br>
 
 #### Registrar usuario
 **Endpoint**: "registrar" </br>
